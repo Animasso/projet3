@@ -10,9 +10,13 @@ body{
 	background-color: #fccef6;
 	font-family: 'Devonshire',cursive;
 }
+
+}
 header{
 	display: flex;
 	flex-direction: column;
+	text-align: center;
+	justify-content: center;
 	align-items: center;
 	margin-top: 40px;
 }
@@ -21,13 +25,23 @@ header{
 }
 h1{
 	font-family: 'Devonshire',cursive;
+	justify-content: center;
 }
 main{
 	display: flex;
 	flex-direction: column;
 }
-h2{
-    text-align: center;
+.titre{
+	display: flex;
+}
+.trait{
+	width: 350px;
+	height: 0;
+	border: 2px solid black;
+	margin-top: 70px;
+	margin-right: 60px;
+	margin-left: 60px;
+	text-align: center;
 }
 
 article{
@@ -42,7 +56,8 @@ article{
 .prix{
 	width: 10%;
 	justify-content: flex-end;
-	margin-right: 
+	margin-top: 55px;
+	margin-right: 50px; 
 }
 #final .plat{
 	flex-direction: column;
