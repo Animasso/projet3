@@ -42,35 +42,44 @@ main{
 	justify-content: center;
 
 }
+
+.carre h2:hover{
+	cursor: pointer;
+	transition-property: transform;
+    transition-duration: 400ms;
+    transform: scale(1.15);
+    }
 .carre1{
 	background: pink;
-	font-family: 'Devonshire regular',cursive;
+	font-family: 'Devonshire',cursive;
 }
 .picto{
 	font-size: 40px;
-	background clip: text (#f15861,#f78f6a);
-	color: transparent;
-   
-	
+    background: -webkit-gradient(from(#f15861),to(#f778f6a));
+    -webkit-background-clip: text;
+
 }
 
 .carre1 p{
-	color:#3c1218;
+	color:#3c1218; 
 
+}
+.carre1 h2{
+	font-size: 35px;
 }
 .carre2{
 	background: #fff5fe;
 	font-family: 'Croissant One', cursive;
 }
 .carre2 h2{
-	 font-size: 35px;
+	 font-size: 25px;
 	 background: -webkit-gradient(linear,left top, left bottom , from(#d8852e),to(#905bfd));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
 
 }
 .carre2 p{
-    color:#c77412;
+    color:#c77412; 
 }
 .carre3{
 	background: #fdfffd;
@@ -78,12 +87,12 @@ main{
 }
 .carre3 h2{
     font-size: 35px;
-	background: -webkit-gradient(linear,left top, left bottom , from(#2140df),to(#0887fb));
+	background:-webkit-gradient(linear,left top, left bottom , from(#2140df),to(#0887fb));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .carre3 p{
-    color:#0887fb;
+    color:#0887fb; 
 }
 .carre4{
 	background: #fdfffd;
@@ -91,12 +100,12 @@ main{
 }
 .carre4 h2{
 	font-size: 35px;
-	background: -webkit-gradient(linear,left top, left bottom , from(#42973c),to(#bfff7c));
+	background:-webkit-gradient(linear,left top, left bottom , from(#42973c),to(#bfff7c));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .carre4 p{
-	color:#72bf56;
+	color:#72bf56; 
 }
 #prochainement{
 	width:400px;
@@ -107,10 +116,20 @@ main{
 	background: #2e6f5b ;
 	margin-top: 30px;
 	margin-bottom: 30px;
+	
 }
 #prochainement p,#bottom p{
 	font-size: 2em;
-}
+	cursor: pointer;
+	transform: scale(1);
+    
+ }
+    #prochainement p:hover{
+    transition-property: transform;
+    transition-duration: 400ms;
+    transform: scale(1.15);
+    }
+
 #bottom{
 	width: 100%;
 	background: #2e6f5b ;
