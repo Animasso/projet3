@@ -17,7 +17,6 @@ body{
 	background:#579C87 ;
 	color :#FDCB46;
 	margin-bottom: 40px;
-
 }
 
 /* style des 4 carres */
@@ -64,9 +63,11 @@ body{
 	font-family: 'Devonshire' , cursive;
 	
 }
-.page .picto{
+footer .picto, .page .picto, .page1 .picto{
 	font-size: 3em;
-     background: linear-gradient(to right, #f15861 0%, #f78f6a 100%);
+    background: linear-gradient(#f15861 0%, #f78f6A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
    
 }
 .carre1 h2{
@@ -86,7 +87,7 @@ body{
 }
 .carre2 h2{
 	 font-size: 1.5em;
-     background:-webkit-gradient(linear,left top, right bottom , from(#d8852e),to(#905bfd));
+     background:-webkit-gradient(linear,left top, right bottom , from(#D8852E),to(#905BFD));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
@@ -138,7 +139,8 @@ body{
 	border-radius: 10px;
 	color: #fdcb46 ;
 	background: #579C87;
-	margin-top: 40px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -194,19 +196,16 @@ body{
 .page1, .page2, .page3, .page4 h3 {
 	margin: 0;
 } 
-.page1, .page2, .page3, .page4 img{
-	width: 100%;
-	height:auto;
-}
+
 
 /* la note enchantée */
 
-.page1{max-width:1000px;
+.page1{max-width:900px;
 	margin: auto;
 	border: 1px solid black;
 	background-color:#fcdfdb;
 	font-family: 'Kalam', cursive;
-	font-size: 15px;
+	font-size: 1em;
 }
 body .page1{
 	color: #3D1319
@@ -214,36 +213,38 @@ body .page1{
 
 /* le chic à la française*/
 
-.page2{max-width: 1000px;
+.page2{max-width: 900px;
 	margin: auto;
 	border: 1px solid black;
-	background-color:#fff5fe;
+	background-color: #FFF5FE;
     font-family:'Crimson Text', serif;
-    font-size: 15px;
+    font-size: 1em;
 }
+
 
 /* le delice des papilles*/
 
-.page3{max-width: 1000px;
+.page3{max-width: 900px;
 	margin: auto;
 	border: 1px solid black;
 	background-color:max-width: 1000px;
 	background-color:#EDEFEF;
 	font-family: 'Kalam', cursive;
-	font-size: 15px;
+	font-size: 1em;
 }
 
 /* la palette du gout*/
 
-.page4{max-width: 1000px;
+.page4{max-width: 900px;
 	margin: auto;
 	border: 1px solid black;
 	background-color:max-width: 1000px;
 	background-color:#FDFFFD;
 	font-family: 'Kalam', cursive;
-	font-size: 15px;
+	font-size: 1em;
 
 }
+
 
 /* menu note enchantée */
 .page1 header{
@@ -251,22 +252,26 @@ body .page1{
 	flex-direction: column;
 	text-align: center;
 	justify-content: center;
-	align-items: center
+	font-size: 2em;
 	margin-top: 30px;
 }
-.page1 .picto{
-	font-size: 50px;
+.page1 header .picto{
+	font-size: 2em;
 }
 .page1 h1{
 	font-family: 'Devonshire',cursive;
 	justify-content: center;
-	font-size: 	2em;
+	margin-top: 10px;
 }
 
 .titre {
 	display: flex;
 	text-align: center;
 	justify-content: center;
+}
+.page3 img{
+	width: 90%;
+	height: auto;
 }
 .page1 article{
 	display: flex;
@@ -281,6 +286,11 @@ body .page1{
 .page1 footer{
 	display: flex;
 	justify-content: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.page1 footer .picto{
+	padding-right: 15px;
 }
 
 /* menu chic à la française */
@@ -294,8 +304,25 @@ body .page1{
     margin-top: 100px;
     margin-bottom: 100px;
 }
+.page2 .entree{
+	color: #C67412;
+}
+.page2 .plat1 {
+	color: #A56799;
+}
+.page2 .dessert{
+    color: #6E4CCC;
+}
+main img{
+	padding: 10px;
+}
 .page2 h2 {
 	text-align: center;
+	white-space: nowrap;
+}
+.page2 img{
+	width: 90%;
+	height: auto;
 }
 .page2 article{
 	display: flex;
@@ -313,7 +340,7 @@ body .page1{
 	text-align: center;
 	font-size: 60px;
 	font-family: 'Dancing Script', cursive;
-	background:-webkit-gradient(linear,left top,right bottom, from(#2140df),to(#0887fb));
+    background:-webkit-gradient(linear,left top,right bottom, from(#2140DF),to(#0887FB)); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-top: 100px;
@@ -321,6 +348,11 @@ body .page1{
 }
 .page3 h2 {
 	text-align: center;
+	white-space: nowrap;
+}
+.page3 img{
+	width: 90%;
+	height: auto;
 }
 .page3 article{
 	display: flex;
@@ -346,6 +378,11 @@ body .page1{
 }
 .page4 h2 {
 	text-align: center;
+	white-space: nowrap;
+}
+.page4 img{
+	width: 90%;
+	height: auto;
 }
 .page4 article{
 	display: flex;
