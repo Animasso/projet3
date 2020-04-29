@@ -8,12 +8,12 @@ body{
 	margin: auto;
 	border: 1px solid black;
 }
-.page header{
+header{
 	display: flex;
     justify-content: center;
 	width: 100%;
 	height: 100px;
-	align-items:center;
+	align-items: center;
 	background:#579C87 ;
 	color :#FDCB46;
 	margin-bottom: 40px;
@@ -21,10 +21,11 @@ body{
 
 /* style des 4 carres */
 
-.page h1{
+header h1{  
 	font-size: 3em;
 	margin: 0;
-	font-family: 'Arimo', sans-serif;	
+	font-family: 'Arimo', sans-serif;
+	color :#FDCB46;	
 }
 .page main{
 	display: flex;
@@ -33,15 +34,9 @@ body{
 	text-align: center;
 }
 .page h2{
-	margin: 0
+	margin: 0;
 	font-weight:normal;
 }
-.carre h2:hover{
-	cursor: pointer;
-	transition-property: transform;
-    transition-duration: 400ms;
-    transform: scale(1.15);
-    }
 .page p{
 	margin: 0;
 	font-weight: normal;
@@ -52,26 +47,34 @@ body{
 	width: 350px;
 	height: 500px;
 	margin: 30px;
-	box-shadow: 0px 0px 4px rgba(0, 0, 0.7); 
+	box-shadow: 0px 0px 10px rgba(197, 196, 196 ); 
 	justify-content: center;
 }
+.carre :hover{
+	cursor: pointer;
+	transition-property: transform;
+    transition-duration: 400ms;
+    transform: scale(1.15);
+    opacity: .6;
+    transition: opacity .9s;
+    }
 
+a, footer, header{
+  text-decoration: none;
+}
 
- /* la note enchantée */
+/* la note enchantée */
 .carre1{
 	background: #fcdfdb;
 	font-family: 'Devonshire' , cursive;
 	
 }
-footer .picto, .page .picto, .page1 .picto{
-	font-size: 3em;
-    background: linear-gradient(#f15861, #f78f6A);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-   
+.carre1 img{
+	width: 70px;
 }
 .carre1 h2{
 	font-size: 2em;
+	color: black;
 }
 
 .carre1 p{
@@ -149,6 +152,14 @@ footer .picto, .page .picto, .page1 .picto{
 #prochainement p{
 	padding-bottom: 10px;
 }
+span{
+	width: 30px;
+	height: 30px;
+	border-radius: 50px;
+	color:#FDCB46 ;
+
+
+}
 #prochainement p,footer p{
 	font-size: 30px;
 	cursor: pointer;
@@ -157,14 +168,23 @@ footer .picto, .page .picto, .page1 .picto{
 	font-family: 'Montserrat', sans-serif;
     
  }
-#prochainement p:hover{
-    transition-property: transform;
-    transition-duration: 400ms;
-    transform: scale(1.15);
-    }
+ /* animation footer*/
+footer p:hover{
+	-webkit-animation:shake .1s ease-in-out .1s infinite alternate;
+}
+@-webkit-keyframes shake{
+	from{
+		-webkit-transform:rotate(10deg);
+	}
+	to{
+		-webkit-transform:rotate(-10deg);
+		-webkit-transform-origin:center center;
+
+	}
+}
 
   /* footer */  
-.page footer{
+footer{
 	margin-top: 30px;
 	width: 100%;
 	height: 70px;
@@ -172,8 +192,10 @@ footer .picto, .page .picto, .page1 .picto{
 	color:#FDCB46 ;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	position: 
 }
-.page footer p{
+footer p{
     margin-left: 20px;
     font-family: 'Montserrat', sans-serif;
     margin-top: 20px
@@ -183,37 +205,57 @@ footer .picto, .page .picto, .page1 .picto{
 }
 #contactez p{
 	margin-right: 20px;
+	color:#FDCB46 ;
 }	
 
 /* menus individuel style des 4 menus */
 
-.page1, .page2, .page3, .page4  h2{
-	font-weight: bold;
+h2 {
+	font-weight: lighter;
+	cursor: pointer;
+	position: relative;
+
+}
+h2::after{
+	content: '';
+	height: 30%;
+	position: absolute;
+	bottom: 10%;
+	background: black;
 }
 .page3, .page4 h2 {
 	text-align: center;
 } 
+
 .titre {
 	display: flex;
 	text-align: center;
-	justify-content: center;
+	justify-content: space-around;
 	margin-bottom: 20px;
 }
+
 h3{
 	margin: 0px;
+	font-weight: lighter;
 }
  h3 .dessert .page1, .page2 {
 	margin:  20px;
+}
+.page1 .bas h3{
+	font-size: 2em;
+	font-family: 'Devonshire' , cursive;
 }
 
 /* la note enchantée */
 
 .page1{max-width:900px;
+	height: auto;
 	margin: auto;
 	border: 1px solid black;
 	background-color:#fcdfdb;
 	font-family: 'Kalam', cursive;
 	font-size: 1em;
+	font-weight: lighter;
 }
 body .page1{
 	color: #3D1319
@@ -222,6 +264,7 @@ body .page1{
 /* le chic à la française*/
 
 .page2{max-width: 900px;
+	height: auto;
 	margin: auto;
 	border: 1px solid black;
 	background-color: #FFF5FE;
@@ -233,20 +276,21 @@ body .page1{
 /* le delice des papilles*/
 
 .page3{max-width: 900px;
+	height: auto;
 	margin: auto;
 	border: 1px solid black;
-	background-color:max-width: 1000px;
 	background-color:#EDEFEF;
 	font-family: 'Kalam', cursive;
 	font-size: 1em;
+	font-weight: lighter;
 }
 
 /* la palette du gout*/
 
 .page4{max-width: 900px;
+	height: auto;
 	margin: auto;
 	border: 1px solid black;
-	background-color:max-width: 1000px;
 	background-color:#FDFFFD;
 	font-family: 'Kalam', cursive;
 	font-size: 1em;
@@ -255,27 +299,26 @@ body .page1{
 
 
 /* menu note enchantée */
-.page1 header{
+.page1 .tete{
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-	justify-content: center;
 	font-size: 2em;
 	margin-top: 30px;
+	align-items: center;
 }
-.page1 header .picto{
-	font-size: 2em;
+.page1 .tete img{
+   width: 90px;
+   height: 90px;
 }
-.page1 h1{
+.page1 .tete h1{
 	font-family: 'Devonshire',cursive;
 	justify-content: center;
 	margin-top: 10px;
+	font-weight: lighter;
 }
 
-.page3 img{
-	width: 90%;
-	height: auto;
-}
+
 .page1 article{
 	display: flex;
 	justify-content: space-between;
@@ -286,20 +329,22 @@ body .page1{
 .page1 .prix{
 	margin-right: 100px;
 }
-.page1 footer{
+.page1 .bas{
 	display: flex;
 	justify-content: center;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
-.page1 footer .picto{
+.page1 .bas img{
 	padding-right: 15px;
+	width: 60px;
+	height: 60px;
 }
 
 /* menu chic à la française */
-.page2 h1{
+.page2 .tete{
 	text-align: center;
-	font-size: 	2em;
+	font-size: 	1em;
 	font-family: 'Croissant One', cursive;
 	background:-webkit-gradient(linear,left top, right bottom , from(#d8852e),to(#905bfd));
     -webkit-background-clip: text;
@@ -309,24 +354,30 @@ body .page1{
 }
 .page2 .entree{
 	color: #C67412;
+    margin-bottom: 40px;
 }
 .page2 .plat1 {
 	color: #A56799;
+	margin-bottom: 40px;
 }
 .page2 .dessert{
     color: #6E4CCC;
-}
-main img{
-	padding: 10px;
 }
 .page2 h2 {
 	text-align: center;
 	white-space: nowrap;
 }
+.page2 .trait{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+}
 .page2 img{
 	width: 90%;
 	height: auto;
 }
+
 .page2 article{
 	display: flex;
 	justify-content: space-between;
@@ -339,9 +390,9 @@ main img{
 }
 
 /* menu délice des papilles*/
-.page3 h1{
+.page3 .tete{
 	text-align: center;
-	font-size: 60px;
+	font-size: 2em;
 	font-family: 'Dancing Script', cursive;
     background:-webkit-gradient(linear,left top,right bottom, from(#2140DF),to(#0887FB)); 
     -webkit-background-clip: text;
@@ -358,6 +409,12 @@ main img{
 	width: 90%;
 	height: auto;
 }
+.page3 .entree {
+	margin-bottom: 40px;
+}
+.page3 .plat1{
+	margin-bottom: 40px;
+}
 .page3 article{
 	display: flex;
 	justify-content: space-between;
@@ -370,9 +427,9 @@ main img{
 }
 
 /* menu la palette du gout*/
-.page4 h1{
+.page4 .tete{
 	text-align: center;
-	font-size: 	4em;
+	font-size: 	2em;
 	font-family: 'Kaushan Script', cursive;
 	background:-webkit-gradient(linear,left top, right bottom , from(#42973c),to(#bfff7c));
     -webkit-background-clip: text;
@@ -388,6 +445,12 @@ main img{
 .page4 img{
 	width: 90%;
 	height: auto;
+}
+.page4 .entree {
+	margin-bottom: 40px;
+}
+.page4 .plat1{
+	margin-bottom: 40px;
 }
 .page4 article{
 	display: flex;
