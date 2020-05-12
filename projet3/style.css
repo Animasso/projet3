@@ -94,13 +94,12 @@ a, footer, header{
 	font-family: 'Croissant One', cursive;
 }
 .carre2 h2{
-	 font-size: 1.5em;
+	 font-size: 1.2em;
      background:-webkit-gradient(linear,left top, right bottom , from(#D8852E),to(#905BFD));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background:gradient(linear,left top, right bottom , from(#D8852E),to(#905BFD));
     background-clip: text;
-    text-fill-color: transparent;
 
 }
 .carre2 p{
@@ -123,7 +122,6 @@ a, footer, header{
 
     background:gradient(linear,left top, right bottom , from(#2140df),to(#0887fb));
     background-clip: text;
-    text-fill-color: transparent;
 }
 .carre3 p{
     color:#0887fb;
@@ -142,7 +140,6 @@ a, footer, header{
     -webkit-text-fill-color: transparent;
     background:gradient(linear,left top, right bottom , from(#42973c),to(#bfff7c));
     background-clip: text;
-    text-fill-color: transparent;
 }
 .carre4 p{
 	color:#72bf56; 
@@ -165,30 +162,28 @@ a, footer, header{
 }
 .dot{
 	display: flex;
-	-webkit-animation:bounce .35s ease infinite alternate;
+	animation:opaci 1s ease infinite alternate;
 }
 
-@-webkit-keyframes bounce{
-	from{ 0% transform:translateY(0);
+@-webkit-keyframes opaci{
+	0%{opacity:0;
 	}
-	to {transform: translateY(-10px);
-
+	50%{opacity:0.5;
 	}
-}
-.dot{
-	display: flex;
-	animation:bounce .35s ease infinite alternate;
-}
-
-@keyframes bounce{
-	from{ 0% transform:translateY(0);
+	100%{opacity:1;
 	}
-	to {transform: translateY(-10px);
+}            
 
+@keyframes opaci{
+	0%{opacity:0;
 	}
-}
+	50%{opacity:0.5;
+	}
+	100%{opacity:1;
+	}
+}            
 
-.point1, .point2, .point3{
+.point{
 	margin-bottom: 30px;
 	width: 15px;
 	height: 15px;
@@ -213,7 +208,7 @@ a, footer, header{
  }
  /* animation footer*/
 footer p:hover{
-	-webkit-animation:shake .1s ease-in-out .1s infinite alternate;
+	animation:shake .1s ease-in-out .1s infinite alternate;
 }
 @-webkit-keyframes shake{
 	from{
@@ -301,17 +296,27 @@ h2:after{
     background:-webkit-gradient(linear,left top, right bottom , from(#42973c),to(#bfff7c));
     background:gradient(linear,left top, right bottom , from(#42973c),to(#bfff7c));
 }
-.page3, .page4 h2 {
+ h2 {
 	text-align: center;
+	white-space: nowrap;
 } 
 
-.titre {
+.titre{
 	display: flex;
 	text-align: center;
 	justify-content: space-around;
 	margin-bottom: 20px;
 }
-
+article p{
+	margin-top: 5px;
+	font-weight: bolder;
+}
+.plat{
+	margin-left: 100px;
+}
+.prix{
+	margin-right: 100px;
+}
 h3{
 	margin: 0px;
 	font-weight: lighter;
@@ -334,7 +339,6 @@ h3{
 	background-color:#fcdfdb;
 	font-family: 'Kalam', cursive;
 	font-size: 1em;
-	font-weight: lighter;
 }
 body .page1{
 	color: #3D1319
@@ -363,7 +367,7 @@ body .page1{
 	background-color:#EDEFEF;
 	font-family: 'Kalam', cursive;
 	font-size: 1em;
-	font-weight: lighter;
+
 }
 
 /* la palette du gout*/
@@ -399,18 +403,16 @@ body .page1{
 	margin-top: 10px;
 	font-weight: lighter;
 }
-
+.page1 img {
+	width: 90%;
+	height: auto;
+}
 
 .page1 article{
 	display: flex;
 	justify-content: space-between;
 }
-.page1 .plat{
-	margin-left: 100px;
-}
-.page1 .prix{
-	margin-right: 100px;
-}
+
 .page1 .bas{
 	display: flex;
 	justify-content: center;
@@ -434,7 +436,6 @@ body .page1{
 
     background:gradient(linear,left top, right bottom , from(#d8852e),to(#905bfd));
     background-clip: text;
-    text-fill-color: transparent;
     margin-top: 100px;
     margin-bottom: 100px;
 }
@@ -450,10 +451,7 @@ body .page1{
     color: #6E4CCC;
     margin-bottom: 120px;
 }
-.page2 h2 {
-	text-align: center;
-	white-space: nowrap;
-}
+
 .page2 .trait{
 	display: flex;
 	justify-content: space-around;
@@ -469,12 +467,7 @@ body .page1{
 	display: flex;
 	justify-content: space-between;
 }
-.page2 .plat{
-	margin-left: 100px;
-}
-.page2 .prix{
-	margin-right: 100px;
-}
+
 
 /* menu délice des papilles*/
 .page3 .tete{
@@ -487,11 +480,11 @@ body .page1{
 
     background:gradient(linear,left top,right bottom, from(#2140DF),to(#0887FB)); 
     background-clip: text;
-    text-fill-color: transparent;
+    text-emphasis-color: transparent;
     margin-top: 100px;
     margin-bottom: 100px;
 }
-.page3 h2 {
+.page3 h2{
 	text-align: center;
 	white-space: nowrap;
 	margin: auto;
@@ -510,12 +503,7 @@ body .page1{
 	display: flex;
 	justify-content: space-between;
 }
-.page3 .plat{
-	margin-left: 100px;
-}
-.page3 .prix{
-	margin-right: 100px;
-}
+
 .page3 .dessert{
 	margin-bottom: 120px;
 }
@@ -529,7 +517,6 @@ body .page1{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
     margin-top: 100px;
     margin-bottom: 100px;
 }
@@ -552,13 +539,6 @@ body .page1{
 	display: flex;
 	justify-content: space-between;
 }
-
-.page4 .plat{
-	margin-left: 100px;
-}
-.page4 .prix{
-	margin-right: 100px;
-}
 .page4 .dessert{
 	margin-bottom: 120px;
 }
@@ -579,15 +559,55 @@ body .page1{
 	footer{
 		flex-direction: column;
 	}
+	#mention{
+		width: 100%;
+		height: 10%;
+	}
+	#contactez{
+		width: 100%;
+		height: 10%;
+	}
 	#mention p{
 		margin-left: 0px;
+		text-align: center;
 	}
 	#contactez p{
 		margin-right: 0px;
+		text-align: center;
 	}	
-
-
-
+}
+ @media screen and (max-width:425px){
+	 
+	 img{
+		 padding-top: 15px;
+	 }
+	 .page1 .bas img{
+		padding-right: 1px;
+        padding-top: 5px;
+	 }
+	 .page1 img{
+		padding-top: 25px;
+	}
+	 article{
+		 flex-direction: column;
+		 margin-bottom: 20px;
+		 text-align: center;
+		 margin: 0;
+	 }
+	 .plat{
+		 margin-left: 0;
+	 }
+     .prix{
+		 margin-right: 0;
+	 }
+     article p{
+	 text-align: center;
+	 margin-right: 0;
+     }
 
 }
+
+
+
  
+
