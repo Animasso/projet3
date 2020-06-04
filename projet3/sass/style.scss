@@ -1,7 +1,10 @@
-body {
-	margin: 0;
-	padding: 0;
-	}
+@import "mixins.scss";
+
+body{
+	margin:0;
+	padding:0;
+}
+	
 .page {
 	max-width: 1000px;
 	width: 100%;
@@ -31,7 +34,7 @@ header {
 	align-items: center;
 	background: #579C87;
 	color: #FDCB46;
-	margin-bottom: 80px;
+	margin-bottom: 40px;
 	text-decoration: none;
 	h1 {
 		font-size: 3em;
@@ -54,17 +57,13 @@ a {
 	text-decoration: none;
 	transform: scale(1);
 	transition: .4s ease-in-out;
-	&:hover {
-		cursor: pointer;
-		transform: scale(1.10);
-		opacity: .4;
-		transition: opacity .9s;
-	}
+	
 }
 
 .carre1 {
 	background: #fcdfdb;
 	font-family: 'Devonshire' , cursive;
+	
 	img {
 		width: 70px;
 	}
@@ -77,6 +76,11 @@ a {
 		font-family: 'Sriracha', cursive;
 		font-size: 2em;
 	}
+	.central{
+		&:hover {
+			@include zoom;
+		}
+    }
 }
 .carre2 {
 	background: #fff5fe;
@@ -84,16 +88,19 @@ a {
 	h2 {
 		font-size: 1.2em;
 		background: -webkit-gradient(linear,left top, right bottom , from(#D8852E),to(#905BFD));
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
 		background: gradient(linear,left top, right bottom , from(#D8852E),to(#905BFD));
-		background-clip: text;
+		@include background;
 	}
 	p {
 		color: #c77412;
 		font-family: 'Noto Serif', serif;
 		font-size: 2em;
 	}
+	.central{
+		&:hover {
+			@include zoom;
+		}
+    }
 }
 .carre3 {
 	background: #fdfffd;
@@ -101,16 +108,19 @@ a {
 	h2 {
 		font-size: 2em;
 		background: -webkit-gradient(linear,left top, right bottom , from(#2140df),to(#0887fb));
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
 		background: gradient(linear,left top, right bottom , from(#2140df),to(#0887fb));
-		background-clip: text;
+		@include background;
 	}
 	p {
 		color: #0887fb;
 		font-family: 'Nanum Pen Script', cursive;
 		font-size: 2.5em;
 	}
+	.central{
+		&:hover {
+			@include zoom;
+		}
+    }
 }
 .carre4 {
 	background: #fdfffd;
@@ -118,16 +128,19 @@ a {
 	h2 {
 		font-size: 2em;
 		background: -webkit-gradient(linear,left top, right bottom , from(#42973c),to(#bfff7c));
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
 		background: gradient(linear,left top, right bottom , from(#42973c),to(#bfff7c));
-		background-clip: text;
+		@include background;
 	}
 	p {
 		color: #72bf56;
 		font-family: 'Nanum Pen Script', cursive;
 		font-size: 2.5em;
 	}
+	.central{
+		&:hover {
+			@include zoom;
+		}
+    }
 }
 #prochainement {
 	width: 400px;
@@ -180,7 +193,7 @@ footer {
 	max-width: inherit;
 	position: fixed;
 	width: 100%;
-	height: 70px;
+	height: 10%;
 	background: #579C87;
 	color: #FDCB46;
 	display: flex;
@@ -208,6 +221,7 @@ footer {
 #mention {
 	p {
 		margin-left: 20px;
+
 	}
 }
 #contactez {
@@ -240,8 +254,8 @@ footer {
 		-webkit-transform: rotate(10deg);
 	}
 	to {
-		-webkit-transform: rotate(-10deg);
-		-webkit-transform-origin: center center;
+		transform: rotate(-10deg);
+		transform-origin: center center;
 	}
 }
 @keyframes "shake" {
@@ -264,129 +278,109 @@ footer {
 img {
 	width: 90%;
 	height: auto;
+	margin-top: 25px;
 }
-article {
+.platprix{
 	display: flex;
 	justify-content: space-between;
 }
-article {
+.platprix {
 	p {
 		margin-top: 5px;
-		font-weight: bolder;
+		font-weight: normal;
 	}
 }
 .plat {
-	margin-left: 100px;
+	margin-left: 60px;
 }
 .prix {
-	margin-right: 100px;
+	margin-right: 70px;
+	p{
+	font-weight: bolder;
+	}
 }
 h2 {
-	cursor: pointer;
 	text-align: center;
-	white-space: nowrap;
-	margin: auto;
 }
 h3 {
-	margin: 0px;
-	font-weight: lighter;
+	font-weight: normal;
+	white-space: nowrap;
+	cursor: pointer;
+	font-size: 1.5em;
 	}
 /*PAGE NOTE ENCHANTEE */
 .page1 {
-	max-width: 900px;
-	height: auto;
-	margin: auto;
-	border: 1px solid black;
+	@include forme;
 	background-color: #fcdfdb;
 	font-family: 'Kalam', cursive;
-	font-size: 1em;
 	.tete {
-		display: flex;
-		flex-direction: column;
-		text-align: center;
-		font-size: 2em;
-		margin-top: 30px;
-		align-items: center;
-		img {
-			width: 90px;
-			height: 90px;
-		}
-		h1 {
+		    display: flex;
+			flex-direction: column;
+			text-align: center;
+			font-size: 2em;
+			margin-bottom: 40px;
+			align-items: center;
+		h2 {
 			font-family: 'Devonshire',cursive;
 			justify-content: center;
 			margin-top: 10px;
 			font-weight: lighter;
 			color: #3D1319;
-		}
+		   }
+			img {
+				width: 90px;
+				height: 90px;
+				}
 	}
-	    h2::after{
-		content: '';
-		display: block;
-		height: 3px;
-		width: 0;
-		transition: width .5s ease;
+		
+	    h3::after{
+			@include after;
 	       }
-        h2:hover::after {
+        h3:hover::after {
 				width: 100%;
 				background: black;
 			}
 		.bas { 
 		display: flex;
 		justify-content: center;
-		h3{
+		h4{
 			font-size: 2em;
-			font-family: 'Devonshire' , cursive;
-			display: flex;
-		    justify-content: center;
+			font-weight: lighter;
+			font-family: 'Devonshire' , cursive;	
 		    margin-top: 20px;
 			margin-bottom: 120px;
 		}
 		img{
 			width: 50px;
 			height:50px;
-			padding-top: 10px;
 		}
-		.dessert {
-		   margin: 20px;
-		   margin-bottom: 10px;
-				}
-		}
-		
 	}
-
+		.dessert {
+		  p{
+			  margin: 0;
+		  }
+				}
+}
 /*PAGE CHIC A LA FRANCAISE*/
 .page2 {
-	margin: 20px;
-	max-width: 900px;
-	height: auto;
-	margin: auto;
-	border: 1px solid black;
+	@include forme;
 	background-color: #FFF5FE;
 	font-family: 'Crimson Text', serif;
-	font-size: 1em;
 	.tete {
-		text-align: center;
-		font-size: 1em;
-		h1{
+		h2{
+		font-size: 2em;
 		font-family: 'Croissant One', cursive;
 		background: -webkit-gradient(linear,left top, right bottom , from(#d8852e),to(#905bfd));
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
 		background: gradient(linear,left top, right bottom , from(#d8852e),to(#905bfd));
-		background-clip: text;
-		margin-top: 100px;
-		margin-bottom: 100px;
+		@include background;
+		@include margin;
 		}
 	 }
 	
-	h2::after{
-		content: '';
-		display: block;
-		height: 3px;
-		width: 0;
-		transition: width .5s ease;
+	h3::after{
+		@include after;
 	 }
-	h2:hover::after {
+	h3:hover::after {
 				width: 100%;
 				background: -webkit-gradient(linear,left top, right bottom , from(#D8852E),to(#905BFD));
 				background: gradient(linear,left top, right bottom , from(#D8852E),to(#905BFD));
@@ -403,59 +397,41 @@ h3 {
 	.dessert {
 		color: #6E4CCC;
 		margin-bottom: 120px;
-	}
-	.trait {
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-	}
+			p{
+				margin: 0;
+			}
+	}	
 }
 /*PAGE LE DELICE DES PAPILLES  */
 .page3 {
-	max-width: 900px;
-	height: auto;
-	margin: auto;
-	border: 1px solid black;
+	@include forme;
 	background-color: #EDEFEF;
 	font-family: 'Kalam', cursive;
-	font-size: 1em;
 	.tete {
-		text-align: center;
-		font-size: 2em;
-		font-family: 'Dancing Script', cursive;
-		background: -webkit-gradient(linear,left top,right bottom, from(#2140DF),to(#0887FB));
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background: gradient(linear,left top,right bottom, from(#2140DF),to(#0887FB));
-		background-clip: text;
-		margin-top: 100px;
-		margin-bottom: 100px;
+		   h2{
+		      font-size: 4em;
+		      font-family: 'Dancing Script', cursive;
+		      background: -webkit-gradient(linear,left top,right bottom, from(#2140DF),to(#0887FB));
+			  background: gradient(linear,left top,right bottom, from(#2140DF),to(#0887FB));
+		      @include background;
+		      @include margin;
+			}
 		}
-	
-	h2:after{
-		content: '';
-		display: block;
-		height: 3px;
-		width: 0;
-		transition: width .5s ease;
+	h3:after{
+		@include after;
 	 	}
-		h2:hover::after {
+		h3:hover::after {
 				width: 100%;
 				background: -webkit-gradient(linear,left top, right bottom , from(#2140df),to(#0887fb));
 				background: gradient(linear,left top, right bottom , from(#2140df),to(#0887fb));
 			}
-	
-		img {
-		width: 90%;
-		height: auto;
-		}
 		.entree {
 		margin-bottom: 40px;
 		}
 		.plat1 {
 		margin-bottom: 40px;
 		}
-		article {
+		.platprix{
 		display: flex;
 		justify-content: space-between;
 		}
@@ -465,37 +441,25 @@ h3 {
 }
 /*PAGE LA PALETTE DU GOUT */
 .page4 {
-	max-width: 900px;
-	height: auto;
-	margin: auto;
-	border: 1px solid black;
+	@include forme;
 	background-color: #FDFFFD;
 	font-family: 'Kalam', cursive;
-	font-size: 1em;
 	.tete {
-			h1{
-			text-align: center;
+			h2{
 			font-size: 4em;
 			font-family: 'Kaushan Script', cursive;
 			background: -webkit-gradient(linear,left top, right bottom , from(#42973c),to(#bfff7c));
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-clip: text;
-			margin-top: 100px;
-		   	margin-bottom: 100px;
+			@include background;
+			@include margin;
 			 }
 		}
-			h2:after{
-			content: '';
-			display: block;
-			height: 3px;
-			width: 0;
-			transition: width .5s ease;
+			h3:after{
+			@include after;
 		 }
-		h2:hover::after {
+			h3:hover::after {
 				width: 100%;
-				background: -webkit-gradient(linear,left top, right bottom , from(#42973c),to(#bfff7c));
 				background: gradient(linear,left top, right bottom , from(#42973c),to(#bfff7c));
+				background: -webkit-gradient(linear,left top, right bottom , from(#42973c),to(#bfff7c));
 			}
 		.entree {
 				margin-bottom: 40px;
@@ -506,6 +470,11 @@ h3 {
 		.dessert {
 				margin-bottom: 120px;
 			}
+}
+.legales{
+	max-width: 900px;
+	margin: auto;
+	border: 1px solid black;
 }
 /* Responsive*/
 @media screen and (max-width:768px) {
@@ -521,23 +490,23 @@ h3 {
 	}
 	footer {
 		width:100% ; 
-        height: inherit;
-		flex-direction: column;
+        height: 20%;
+		flex-direction: column; 
 
 	}
 	#mention {
 		width: 100%;
 		height: 10%;
 		p {
-			margin-left: 0px;
+			margin-left: 0;
 			text-align: center;
 		}
 	}
 	#contactez {
 		width: 100%;
-		height: 10%;
 		p {
 			text-align: center;
+			padding-top: 30px;
 		}
 	}
 }
@@ -559,7 +528,7 @@ h3 {
 			padding-top: 25px;
 		}
 	}
-	article {
+	.platprix{
 		flex-direction: column;
 		margin-bottom: 20px;
 		text-align: center;
@@ -567,6 +536,7 @@ h3 {
 		p {
 			text-align: center;
 			margin-right: 0;
+			margin: 15px;
 		}
 	}
 	.plat {

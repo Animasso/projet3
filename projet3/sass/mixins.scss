@@ -1,0 +1,29 @@
+@mixin forme {
+    max-width: 900px;
+	height: 100%;
+	margin: auto;
+    border: 1px solid black;
+    font-size: 1em;
+}
+@mixin after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0;
+    transition: width .5s ease;
+}
+@mixin zoom{
+    cursor: pointer;
+    transform: scale(1.10);
+    opacity: .4;
+    transition: opacity .9s;
+}
+@mixin background {
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+@mixin margin {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
