@@ -1,558 +1,564 @@
 @import "mixins.scss";
 
-body{
-	margin:0;
-	padding:0;
+body {
+    margin: 0;
+    padding: 0;
 }
-	
+
 .page {
-	max-width: 1000px;
-	width: 100%;
-	margin: auto;
-	border: 1px solid black;
-	main {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		text-align: center;
-	}
-	h2 {
-		margin: 0;
-		font-weight: normal;
-	}
-	p {
-		margin: 0;
-		font-weight: normal;
-	}
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+    border: 1px solid black;
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    h2 {
+        margin: 0;
+        font-weight: normal;
+    }
+    p {
+        margin: 0;
+        font-weight: normal;
+    }
 }
 header {
-	max-width: inherit;
-	display: flex;
-	justify-content: center;
-	width: 100%;
-	height: 100px;
-	align-items: center;
-	background: #579C87;
-	color: #FDCB46;
-	margin-bottom: 40px;
-	text-decoration: none;
-	h1 {
-		font-size: 3em;
-		margin: 0;
-		font-family: 'Arimo', sans-serif;
-		color: #FDCB46;
-	}
+    max-width: inherit;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    background: #579c87;
+    color: #fdcb46;
+    margin-bottom: 40px;
+    text-decoration: none;
+    h1 {
+        font-size: 3em;
+        margin: 0;
+        font-family: "Arimo", sans-serif;
+        color: #fdcb46;
+    }
 }
 .carre {
-	display: flex;
-	flex-direction: column;
-	width: 350px;
-	height: 500px;
-	margin: 30px;
-	box-shadow: 0px 0px 10px rgba(196,196,196,.5);
-	justify-content: center;
-	
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 500px;
+    margin: 30px;
+    box-shadow: 0px 0px 10px rgba(196, 196, 196, 0.5);
+    justify-content: center;
 }
 a {
-	text-decoration: none;
-	transform: scale(1);
-	transition: .4s ease-in-out;
-	
+    text-decoration: none;
+    transform: scale(1);
+    transition: 0.4s ease-in-out;
 }
 
 .carre1 {
-	background: #fcdfdb;
-	font-family: 'Devonshire' , cursive;
-	
-	img {
-		width: 70px;
-	}
-	h2 {
-		font-size: 2em;
-		color: black;
-	}
-	p {
-		color: #3c1218;
-		font-family: 'Sriracha', cursive;
-		font-size: 2em;
-	}
-	.central{
-		&:hover {
-			@include zoom;
-		}
+    background: #fcdfdb;
+    font-family: "Devonshire", cursive;
+
+    img {
+        width: 70px;
+    }
+    h2 {
+        font-size: 2em;
+        color: black;
+    }
+    p {
+        color: #3c1218;
+        font-family: "Sriracha", cursive;
+        font-size: 2em;
+    }
+    .central {
+        &:hover {
+            @include zoom;
+        }
     }
 }
 .carre2 {
-	background: #fff5fe;
-	font-family: 'Croissant One', cursive;
-	h2 {
-		font-size: 1.2em;
-		background: -webkit-gradient(linear,left top, right bottom , from(#D8852E),to(#905BFD));
-		background: gradient(linear,left top, right bottom , from(#D8852E),to(#905BFD));
-		@include background;
-	}
-	p {
-		color: #c77412;
-		font-family: 'Noto Serif', serif;
-		font-size: 2em;
-	}
-	.central{
-		&:hover {
-			@include zoom;
-		}
+    background: #fff5fe;
+    font-family: "Croissant One", cursive;
+    h2 {
+        font-size: 1.2em;
+        background: -webkit-gradient(linear, left top, right bottom, from(#d8852e), to(#905bfd));
+        background: gradient(linear, left top, right bottom, from(#d8852e), to(#905bfd));
+        @include background;
+    }
+    p {
+        color: #c77412;
+        font-family: "Noto Serif", serif;
+        font-size: 2em;
+    }
+    .central {
+        &:hover {
+            @include zoom;
+        }
     }
 }
 .carre3 {
-	background: #fdfffd;
-	font-family: 'Dancing Script', cursive;
-	h2 {
-		font-size: 2em;
-		background: -webkit-gradient(linear,left top, right bottom , from(#2140df),to(#0887fb));
-		background: gradient(linear,left top, right bottom , from(#2140df),to(#0887fb));
-		@include background;
-	}
-	p {
-		color: #0887fb;
-		font-family: 'Nanum Pen Script', cursive;
-		font-size: 2.5em;
-	}
-	.central{
-		&:hover {
-			@include zoom;
-		}
+    background: #fdfffd;
+    font-family: "Dancing Script", cursive;
+    h2 {
+        font-size: 2em;
+        background: -webkit-gradient(linear, left top, right bottom, from(#2140df), to(#0887fb));
+        background: gradient(linear, left top, right bottom, from(#2140df), to(#0887fb));
+        @include background;
+    }
+    p {
+        color: #0887fb;
+        font-family: "Nanum Pen Script", cursive;
+        font-size: 2.5em;
+    }
+    .central {
+        &:hover {
+            @include zoom;
+        }
     }
 }
 .carre4 {
-	background: #fdfffd;
-	font-family: 'Kaushan Script', cursive;
-	h2 {
-		font-size: 2em;
-		background: -webkit-gradient(linear,left top, right bottom , from(#42973c),to(#bfff7c));
-		background: gradient(linear,left top, right bottom , from(#42973c),to(#bfff7c));
-		@include background;
-	}
-	p {
-		color: #72bf56;
-		font-family: 'Nanum Pen Script', cursive;
-		font-size: 2.5em;
-	}
-	.central{
-		&:hover {
-			@include zoom;
-		}
+    background: #fdfffd;
+    font-family: "Kaushan Script", cursive;
+    h2 {
+        font-size: 2em;
+        background: -webkit-gradient(linear, left top, right bottom, from(#42973c), to(#bfff7c));
+        background: gradient(linear, left top, right bottom, from(#42973c), to(#bfff7c));
+        @include background;
+    }
+    p {
+        color: #72bf56;
+        font-family: "Nanum Pen Script", cursive;
+        font-size: 2.5em;
+    }
+    .central {
+        &:hover {
+            @include zoom;
+        }
     }
 }
 #prochainement {
-	width: 400px;
-	height: 60px;
-	border-radius: 10px;
-	color: #fdcb46;
-	background: #579C87;
-	margin-top: 20px;
-	margin-bottom: 120px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	p {
-		margin-right: 10px;
-		font-size: 30px;
-		cursor: pointer;
-		transform: scale(1);
-		align-content: center;
-		font-family: 'Montserrat', sans-serif;
-	}
+    width: 400px;
+    height: 60px;
+    border-radius: 10px;
+    color: #fdcb46;
+    background: #579c87;
+    margin-top: 20px;
+    margin-bottom: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+        margin-right: 10px;
+        font-size: 30px;
+        cursor: pointer;
+        transform: scale(1);
+        align-content: center;
+        font-family: "Montserrat", sans-serif;
+    }
 }
-.dot{
-	display: flex;
+.dot {
+    display: flex;
 }
-.point1, .point2, .point3 {
-	margin-bottom: 30px;
-	width: 10px;
-	height: 10px;
-	border-radius: 50px;
-	background: #FDCB46;
-	margin-right: 5px;
-	align-items: center;
-	margin-block-start: 2EM;
-	cursor: pointer;
+.point1,
+.point2,
+.point3 {
+    margin-bottom: 30px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    background: #fdcb46;
+    margin-right: 5px;
+    align-items: center;
+    margin-block-start: 2em;
+    cursor: pointer;
 }
-.point1{
-	animation: opaci 1s ease-in-out infinite ;
-	  }
-.point2{
-	animation: opaci 1s ease-in-out infinite ;
-	animation-delay: 0.4s;		
-	  }
-.point3{
-	animation: opaci 1s ease-in-out infinite ;
-	animation-delay: 0.8s;		
-	   }	  
+.point1 {
+    animation: opaci 1s ease-in-out infinite;
+}
+.point2 {
+    animation: opaci 1s ease-in-out infinite;
+    animation-delay: 0.4s;
+}
+.point3 {
+    animation: opaci 1s ease-in-out infinite;
+    animation-delay: 0.8s;
+}
 
 footer {
-	text-decoration: none;
-	max-width: inherit;
-	position: fixed;
-	width: 100%;
-	height: 10%;
-	background: #579C87;
-	color: #FDCB46;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-top: 100px;
-	bottom: 0;
-	p {
-		font-size: 30px;
-		cursor: pointer;
-		transform: scale(1);
-		align-content: center;
-		margin-left: 20px;
-		font-family: 'Montserrat', sans-serif;
-		margin-top: 20px;
-		font-size: 1.5em;
-		text-align: center;
-		justify-content:space-between;
-		color:#FDCB46; ;
-		&:hover {
-			animation: shake .1s ease-in-out .1s infinite alternate;
-		}
-	}
+    text-decoration: none;
+    max-width: inherit;
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    background: #579c87;
+    color: #fdcb46;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    bottom: 0;
+    p {
+        font-size: 30px;
+        cursor: pointer;
+        transform: scale(1);
+        align-content: center;
+        margin-left: 20px;
+        font-family: "Montserrat", sans-serif;
+        margin-top: 20px;
+        font-size: 1.5em;
+        text-align: center;
+        justify-content: space-between;
+        color: #fdcb46;
+        &:hover {
+            animation: shake 0.1s ease-in-out 0.1s infinite alternate;
+        }
+    }
 }
 #mention {
-	p {
-		margin-left: 20px;
-
-	}
+    p {
+        margin-left: 20px;
+    }
 }
 #contactez {
-	p {
-		margin-right: 20px;
+    p {
+        margin-right: 20px;
     }
 }
 /* keyframes  */
 
 /* Animation des points de prochainement  */
-@-webkit-keyframes "opaci"{
-	0% {
-		opacity:1;
-	}
-	100% {
-		opacity:0;
-	}
+@-webkit-keyframes "opaci" {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
-@keyframes "opaci"{
-	0% {
-		opacity:1;
-	}
-	100% {
-		opacity:0;
-	}
+@keyframes "opaci" {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 /* animation footer*/
 @-webkit-keyframes "shake" {
-	from {
-		-webkit-transform: rotate(10deg);
-	}
-	to {
-		transform: rotate(-10deg);
-		transform-origin: center center;
-	}
+    from {
+        -webkit-transform: rotate(10deg);
+    }
+    to {
+        transform: rotate(-10deg);
+        transform-origin: center center;
+    }
 }
 @keyframes "shake" {
-	from {
-		transform: rotate(10deg);
-	}
-	to {
-		transform: rotate(-10deg);
-		transform-origin: center center;
-	}
+    from {
+        transform: rotate(10deg);
+    }
+    to {
+        transform: rotate(-10deg);
+        transform-origin: center center;
+    }
 }
 /*STYLE 4 PAGES */
 .titre {
-	display: flex;
-	text-align: center;
-	justify-content: space-around;
-	margin-bottom: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
 }
 
 img {
-	width: 100%;
-	height: auto;
-	margin-top: 20px;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
 }
-.platprix{
-	display: flex;
-	justify-content: space-between;
-	p {
-		margin-top: 5px;
-		font-weight: normal;
-	}
+.platprix {
+    display: flex;
+    justify-content: space-between;
+    p {
+        margin-top: 5px;
+        font-weight: normal;
+    }
 }
 .plat {
-	margin-left: 60px;
+    margin-left: 140px;
 }
 .prix {
-	margin-right: 70px;
-	p{
-	font-weight: bolder;
-	}
+    margin-right: 130px;
+    p {
+        font-weight: bolder;
+    }
 }
 h2 {
-	text-align: center;
+    text-align: center;
 }
 h3 {
-	font-weight: normal;
-	white-space: nowrap;
-	cursor: pointer;
-	font-size: 1.5em;
-	}
+    font-weight: normal;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 1.5em;
+}
 /*PAGE NOTE ENCHANTEE */
 .page1 {
-	@include forme;
-	background-color: #fcdfdb;
-	font-family: 'Kalam', cursive;
-	.tete {
-		    display: flex;
-			flex-direction: column;
-			text-align: center;
-			font-size: 2em;
-			margin-bottom: 40px;
-			align-items: center;
-		h2 {
-			font-family: 'Devonshire',cursive;
-			justify-content: center;
-			margin-top: 10px;
-			font-weight: lighter;
-			color: #3D1319;
-		   }
-			img {
-				width: 90px;
-				height: 90px;
-				}
-	}
-	    h3 {
-		padding-top: 20px;
-	}   
-	    h3::after{
-			@include after;
-	       }
-        h3:hover::after {
-				width: 100%;
-				background: black;
-			}
-		.bas { 
-		display: flex;
-		justify-content: center;
-		h4{
-			font-size: 2em;
-			font-weight: lighter;
-			font-family: 'Devonshire' , cursive;	
-		    margin-top: 20px;
-			margin-bottom: 140px;
-		}
-		figure{
-			margin: 0;
-		}
-		img{
-			width: 50px;
-			height:50px;
-		}
-	}
-		.dessert {
-		  p{
-			  margin: 0;
-		  }
-				}
+    @include forme;
+    background-color: #fcdfdb;
+    font-family: "Kalam", cursive;
+    .tete {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 40px;
+        align-items: center;
+        h2 {
+            font-family: "Devonshire", cursive;
+            justify-content: center;
+            margin-top: 10px;
+            font-weight: lighter;
+            color: #3d1319;
+        }
+        img {
+            width: 90px;
+            height: 90px;
+        }
+    }
+    h3 {
+        padding-top: 20px;
+    }
+    h3::after {
+        @include after;
+    }
+    h3:hover::after {
+        width: 100%;
+        background: black;
+    }
+    .plat {
+        margin-left: 60px;
+    }
+    .prix {
+        margin-right: 70px;
+        p {
+            font-weight: bolder;
+        }
+    }
+    .bas {
+        display: flex;
+        justify-content: center;
+        h4 {
+            font-size: 2em;
+            font-weight: lighter;
+            font-family: "Devonshire", cursive;
+            margin-top: 20px;
+            margin-bottom: 140px;
+        }
+        figure {
+            margin: 0;
+        }
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    .dessert {
+        p {
+            margin: 0;
+        }
+    }
 }
 /*PAGE CHIC A LA FRANCAISE*/
 .page2 {
-	@include forme;
-	background-color: #FFF5FE;
-	font-family: 'Crimson Text', serif;
-	.tete {
-		h2{
-		font-size: 2em;
-		font-family: 'Croissant One', cursive;
-		background: -webkit-gradient(linear,left top, right bottom , from(#d8852e),to(#905bfd));
-		background: gradient(linear,left top, right bottom , from(#d8852e),to(#905bfd));
-		@include background;
-		@include margin;
-		}
-	 }
-	
-	h3::after{
-		@include after;
-	 }
-	h3:hover::after {
-				width: 100%;
-				background: -webkit-gradient(linear,left top, right bottom , from(#D8852E),to(#905BFD));
-				background: gradient(linear,left top, right bottom , from(#D8852E),to(#905BFD));
-			}
-	
-	.entree {
-		color: #C67412;
-		margin-bottom: 40px;
-	}
-	.plat1 {
-		color: #A56799;
-		margin-bottom: 40px;
-	}
-	.dessert {
-		color: #6E4CCC;
-		margin-bottom: 140px;
-			p{
-				margin: 0;
-			}
-	}	
+    @include forme;
+    background-color: #fff5fe;
+    font-family: "Crimson Text", serif;
+    .tete {
+        h2 {
+            font-size: 2em;
+            font-family: "Croissant One", cursive;
+            background: -webkit-gradient(linear, left top, right bottom, from(#d8852e), to(#905bfd));
+            background: gradient(linear, left top, right bottom, from(#d8852e), to(#905bfd));
+            @include background;
+            @include margin;
+        }
+    }
+
+    h3::after {
+        @include after;
+    }
+    h3:hover::after {
+        width: 100%;
+        background: -webkit-gradient(linear, left top, right bottom, from(#d8852e), to(#905bfd));
+        background: gradient(linear, left top, right bottom, from(#d8852e), to(#905bfd));
+    }
+
+    .entree {
+        color: #c67412;
+        margin-bottom: 40px;
+    }
+    .plat1 {
+        color: #a56799;
+        margin-bottom: 40px;
+    }
+    .dessert {
+        color: #6e4ccc;
+        margin-bottom: 140px;
+        p {
+            margin: 0;
+        }
+    }
 }
 /*PAGE LE DELICE DES PAPILLES  */
 .page3 {
-	@include forme;
-	background-color: #EDEFEF;
-	font-family: 'Kalam', cursive;
-	.tete {
-		   h2{
-		      font-size: 4em;
-		      font-family: 'Dancing Script', cursive;
-		      background: -webkit-gradient(linear,left top,right bottom, from(#2140DF),to(#0887FB));
-			  background: gradient(linear,left top,right bottom, from(#2140DF),to(#0887FB));
-		      @include background;
-		      @include margin;
-			}
-		}
-	h3:after{
-		@include after;
-	 	}
-		h3:hover::after {
-				width: 100%;
-				background: -webkit-gradient(linear,left top, right bottom , from(#2140df),to(#0887fb));
-				background: gradient(linear,left top, right bottom , from(#2140df),to(#0887fb));
-			}
-		.entree {
-		margin-bottom: 40px;
-		}
-		.plat1 {
-		margin-bottom: 40px;
-		}
-		.platprix{
-		display: flex;
-		justify-content: space-between;
-		}
-		.dessert {
-		margin-bottom: 140px;
-		}
+    @include forme;
+    background-color: #edefef;
+    font-family: "Kalam", cursive;
+    .tete {
+        h2 {
+            font-size: 4em;
+            font-family: "Dancing Script", cursive;
+            background: -webkit-gradient(linear, left top, right bottom, from(#2140df), to(#0887fb));
+            background: gradient(linear, left top, right bottom, from(#2140df), to(#0887fb));
+            @include background;
+            @include margin;
+        }
+    }
+    h3:after {
+        @include after;
+    }
+    h3:hover::after {
+        width: 100%;
+        background: -webkit-gradient(linear, left top, right bottom, from(#2140df), to(#0887fb));
+        background: gradient(linear, left top, right bottom, from(#2140df), to(#0887fb));
+    }
+    .entree {
+        margin-bottom: 40px;
+    }
+    .plat1 {
+        margin-bottom: 40px;
+    }
+    .platprix {
+        display: flex;
+        justify-content: space-between;
+    }
+    .dessert {
+        margin-bottom: 140px;
+    }
 }
 /*PAGE LA PALETTE DU GOUT */
 .page4 {
-	@include forme;
-	background-color: #FDFFFD;
-	font-family: 'Kalam', cursive;
-	.tete {
-			h2{
-			font-size: 4em;
-			font-family: 'Kaushan Script', cursive;
-			background: -webkit-gradient(linear,left top, right bottom , from(#42973c),to(#bfff7c));
-			@include background;
-			@include margin;
-			 }
-		}
-			h3:after{
-			@include after;
-		 }
-			h3:hover::after {
-				width: 100%;
-				background: gradient(linear,left top, right bottom , from(#42973c),to(#bfff7c));
-				background: -webkit-gradient(linear,left top, right bottom , from(#42973c),to(#bfff7c));
-			}
-		.entree {
-				margin-bottom: 40px;
-				}
-		.plat1 {
-				margin-bottom: 40px;
-			}
-		.dessert {
-				margin-bottom: 140px;
-			}
+    @include forme;
+    background-color: #fdfffd;
+    font-family: "Kalam", cursive;
+    .tete {
+        h2 {
+            font-size: 4em;
+            font-family: "Kaushan Script", cursive;
+            background: -webkit-gradient(linear, left top, right bottom, from(#42973c), to(#bfff7c));
+            @include background;
+            @include margin;
+        }
+    }
+    h3:after {
+        @include after;
+    }
+    h3:hover::after {
+        width: 100%;
+        background: gradient(linear, left top, right bottom, from(#42973c), to(#bfff7c));
+        background: -webkit-gradient(linear, left top, right bottom, from(#42973c), to(#bfff7c));
+    }
+    .entree {
+        margin-bottom: 40px;
+    }
+    .plat1 {
+        margin-bottom: 40px;
+    }
+    .dessert {
+        margin-bottom: 140px;
+    }
 }
-.legales{
-	 @include forme
-	 header{
-		 margin:0;
-	 }
+.legales {
+    @include forme header {
+        margin: 0;
+    }
 }
 /* Responsive*/
-@media screen and (max-width:768px) {
-	#prochainement {
-		width: 80%;
-		p {
-			font-size: 20px;
-		}
-	}
-	.point {
-		width: 10px;
-		height: 10px;
-	}
-	
-	footer {
-		width:100% ; 
-        height: 20%;
-		flex-direction: column; 	
-	}
-	#mention {
-		width: 100%;
-		height: 10%;
-		p {
-			margin-left: 0;
-			text-align: center;
-		}
-	}
-	#contactez {
-		width: 100%;
-		p {
-			text-align: center;
-			padding-top: 30px;
-		}
-	}
-}
-@media screen and (max-width:425px) {
-	figure{
-		margin: 0;
-	}
-	img {
-		margin-top: 60px;
-	}
-	h3{
-		padding: 20px;
-	}
-	.page1 {
-		h3{
-			margin-top: 50px;
-		}
-		.bas {
-			img {
-				padding-right: 5px;
-				margin: 0;
-			}
-		}
-		img {
-			padding-top: 25px;
-		}
-	}
-	.platprix{
-		flex-direction: column;
-		margin-bottom: 20px;
-		text-align: center;
-		margin: 0;
-		p {
-			text-align: center;
-			margin-right: 0;
-		}
-	}
-	.plat {
-		margin-left: 0;
-	}
-	.prix {
-		margin-right: 0;
-	}
-}
+@media screen and (max-width: 768px) {
+    #prochainement {
+        width: 80%;
+        p {
+            font-size: 20px;
+        }
+    }
+    .point {
+        width: 10px;
+        height: 10px;
+    }
 
+    footer {
+        width: 100%;
+        height: 20%;
+        flex-direction: column;
+    }
+    #mention {
+        width: 100%;
+        height: 10%;
+        p {
+            margin-left: 0;
+            text-align: center;
+        }
+    }
+    #contactez {
+        width: 100%;
+        p {
+            text-align: center;
+            padding-top: 30px;
+        }
+    }
+}
+@media screen and (max-width: 425px) {
+    figure {
+        margin: 0;
+    }
+    img {
+        margin-top: 60px;
+    }
+    h3 {
+        padding: 20px;
+    }
+    .page1 {
+        h3 {
+            margin-top: 50px;
+        }
+        .bas {
+            img {
+                padding-right: 5px;
+                margin: 0;
+            }
+        }
+        img {
+            padding-top: 25px;
+        }
+    }
+    .platprix {
+        flex-direction: column;
+        margin-bottom: 20px;
+        text-align: center;
+        margin: 0;
+        p {
+            text-align: center;
+            margin-right: 0;
+        }
+    }
+    .plat {
+        margin-left: 0;
+    }
+    .prix {
+        margin-right: 0;
+    }
+}
