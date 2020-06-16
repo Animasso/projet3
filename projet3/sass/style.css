@@ -78,10 +78,6 @@ header h1 {
 
 a {
   text-decoration: none;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: 0.4s ease-in-out;
-  transition: 0.4s ease-in-out;
 }
 
 .carre1 {
@@ -769,14 +765,10 @@ h3 {
     text-align: center;
     margin: 0;
   }
-  .platprix p {
-    text-align: center;
-    margin-right: 0;
-  }
-  .plat {
+  .platprix .plat {
     margin-left: 0;
   }
-  .prix {
+  .platprix .prix {
     margin-right: 0;
   }
 }
